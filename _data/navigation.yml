@@ -1,0 +1,36 @@
+primary:
+  - title: Дом и уют
+    url: /home-care/
+    children:
+      - title: Уборка и уход
+        url: /home-care/cleaning/
+      - title: Ремонт и обслуживание
+        url: /home-care/maintenance/
+  - title: Финансы и документы
+    url: /finance/
+    children:
+      - title: Бюджет и платежи
+        url: /finance/budget/
+      - title: Документы и договоры
+        url: /finance/paperwork/
+  - title: Здоровье и безопасность
+    url: /wellbeing/
+    children:
+      - title: Первая помощь
+        url: /wellbeing/first-aid/
+      - title: Домашняя безопасность
+        url: /wellbeing/home-safety/
+  - title: Техника и гаджеты
+    url: /tech/
+    children:
+      - title: Бытовая техника
+        url: /tech/appliances/
+      - title: Цифровые устройства
+        url: /tech/digital/
+  - title: Транспорт и передвижение
+    url: /mobility/
+    children:
+      - title: Автомобиль
+        url: /mobility/car/
+      - title: Общественный транспорт
+        url: /mobility/public-transport/

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<section class="category">
+  <header class="category-header">
+    <h1 class="category-title">{{ page.title }}</h1>
+    {% if page.lead %}
+    <p class="category-lead">{{ page.lead }}</p>
+    {% endif %}
+  </header>
+  <div class="category-content">
+    {{ content }}
+  </div>
+  {% assign related_pages = site.pages | where: 'category', page.category | sort: 'nav_order' %}
+  {% assign related_pages = related_pages | reject: 'url', page.url %}
+  {% if related_pages.size > 0 %}
+  <div class="category-links">
+    <h2>Практические подсекции</h2>
+    <ul>
+      {% for item in related_pages %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% if item.lead %}<span class="category-links__lead"> — {{ item.lead }}</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</section>

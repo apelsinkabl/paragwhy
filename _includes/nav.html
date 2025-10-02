@@ -1,0 +1,22 @@
+{% assign nav = site.data.navigation[site.nav_data] %}
+{% if nav %}
+<nav class="site-nav" aria-label="Главная навигация">
+  <ul class="nav-list">
+    {% for item in nav %}
+    {% assign is_active = page.url == item.url %}
+    <li class="nav-item{% if is_active %} nav-item--active{% endif %}">
+      <a href="{{ item.url | relative_url }}"{% if item.children %} aria-haspopup="true"{% endif %}>{{ item.title }}{% if item.children %}<span class="nav-caret" aria-hidden="true">▾</span>{% endif %}</a>
+      {% if item.children %}
+      <ul class="nav-sublist">
+        {% for child in item.children %}
+        <li class="nav-subitem{% if page.url == child.url %} nav-subitem--active{% endif %}">
+          <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}
