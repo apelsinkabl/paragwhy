@@ -3,8 +3,8 @@ title: "Бытовой гид"
 description: "Минималистичная база знаний по бытовым вопросам"
 lang: ru
 timezone: Europe/Moscow
-baseurl: ""
-url: "https://zubritskii-i.github.io"
+baseurl: "/paragwhy"
+url: "https://paragwhy.github.io"
 markdown: kramdown
 theme: null
 permalink: pretty
